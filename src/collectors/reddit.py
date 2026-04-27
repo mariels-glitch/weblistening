@@ -184,6 +184,8 @@ def _parse_rss(xml_text: str, sub: str, streams: dict, competitors: list[dict], 
 
 
 _SEARCH_TERMS = ["nibbles card", "nibbles credit", "nibbles insurance", "nibbles pet"]
+_IN_CI = os.environ.get("CI") == "true"  # GitHub Actions sets CI=true
+
 
 def _search_subreddit(sub: str, headers: dict) -> list[dict]:
     """Search a subreddit for Nibbles-specific posts using Reddit's search endpoint.
@@ -256,8 +258,9 @@ def _fetch_rss(cfg: dict) -> list[Item]:
                 break
             time.sleep(2)
 
-        # For non-owned subs, also run keyword search to catch older Nibbles posts
-        if not is_owned:
+        # For non-owned subs, also run keyword search to catch older Nibbles posts.
+        # Skipped in CI (GitHub Actions) because datacenter IPs are blocked by Reddit.
+        if not is_owned and not _IN_CI:
             search_posts = _search_subreddit(sub, headers)
             seen_ids = {it.item_id for it in sub_items}
             for d in search_posts:

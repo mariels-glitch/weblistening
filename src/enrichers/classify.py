@@ -114,26 +114,27 @@ class ClaudeClassifier:
         return self._client
 
     def classify(self, text: str) -> tuple[Sentiment, float]:
-        client = self._client_or_raise()
-        prompt = (
-            "You are classifying a short piece of customer-voice text about a pet "
-            "credit card / pet insurance product. Reply with ONLY a JSON object "
-            "of the form {\"sentiment\": \"positive|negative|neutral|mixed\", "
-            "\"confidence\": 0.0-1.0}. No prose.\n\nTEXT:\n" + text[:4000]
-        )
-        resp = client.messages.create(
-            model=self.model,
-            max_tokens=60,
-            temperature=0.0,
-            messages=[{"role": "user", "content": prompt}],
-        )
-        raw = "".join(b.text for b in resp.content if getattr(b, "type", "") == "text")
         try:
+            client = self._client_or_raise()
+            prompt = (
+                "You are classifying a short piece of customer-voice text about a pet "
+                "credit card / pet insurance product. Reply with ONLY a JSON object "
+                "of the form {\"sentiment\": \"positive|negative|neutral|mixed\", "
+                "\"confidence\": 0.0-1.0}. No prose.\n\nTEXT:\n" + text[:4000]
+            )
+            resp = client.messages.create(
+                model=self.model,
+                max_tokens=60,
+                temperature=0.0,
+                messages=[{"role": "user", "content": prompt}],
+            )
+            raw = "".join(b.text for b in resp.content if getattr(b, "type", "") == "text")
             obj = json.loads(raw.strip().split("\n")[-1])
             return obj["sentiment"], float(obj.get("confidence", 0.7))
-        except Exception:
-            # If the model wandered off-format, fall back to lexicon rather than
-            # dropping the item.
+        except Exception as e:
+            # Any failure (bad key, rate limit, model error, JSON parse) falls
+            # back to the lexicon so the digest never crashes on a classifier error.
+            print(f"[claude classifier] falling back to lexicon: {e}")
             return LexiconClassifier().classify(text)
 
 
