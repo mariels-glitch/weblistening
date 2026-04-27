@@ -24,7 +24,16 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run digest
-        run: python run_digest.py --out out/ --send
+        # --send is only active once RESEND_API_KEY secret is set in GitHub.
+        # Until then the digest renders and commits to the repo — view it at
+        # github.com/mariels-glitch/weblistening/blob/main/out/digest.html
+        run: |
+          if [ -n "$RESEND_API_KEY" ]; then
+            python run_digest.py --out out/ --send
+          else
+            echo "RESEND_API_KEY not set — running without email delivery"
+            python run_digest.py --out out/
+          fi
         env:
           ANTHROPIC_API_KEY:    ${{ secrets.ANTHROPIC_API_KEY }}
           REDDIT_CLIENT_ID:     ${{ secrets.REDDIT_CLIENT_ID }}
