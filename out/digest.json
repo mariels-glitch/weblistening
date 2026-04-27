@@ -1,0 +1,119 @@
+{
+  "digest_id": "digest-20260427",
+  "date": "2026-04-27T03:16:08.726199Z",
+  "window_hours": 720,
+  "items_analyzed": 29,
+  "sentiment_score": 55,
+  "sentiment_delta_vs_7d": -19,
+  "headline": "Today: customers praised app ux / bugs; complaints rising on claims speed.",
+  "loved": [
+    {
+      "theme": "App UX / bugs",
+      "one_line": "App was easy to navigate App was easy to navigate.",
+      "supporting_item_ids": [
+        "appstore:13646127643",
+        "appstore:13633391549",
+        "trustpilot:c8e145f60e65"
+      ],
+      "count": 3,
+      "sentiment": "positive"
+    },
+    {
+      "theme": "Onboarding / Application",
+      "one_line": "Easy to apply Easy to apply.",
+      "supporting_item_ids": [
+        "trustpilot:347422658ecd",
+        "trustpilot:86c0fd942015",
+        "trustpilot:b7ada50100fd"
+      ],
+      "count": 3,
+      "sentiment": "positive"
+    }
+  ],
+  "disliked": [
+    {
+      "theme": "Claims speed",
+      "one_line": "It's now weeks later, zero idea what's going on with my claim.",
+      "supporting_item_ids": [
+        "trustpilot:54062e58d07b",
+        "trustpilot:9b3882a6bc80",
+        "trustpilot:b9b1f710824e",
+        "trustpilot:ace04484b155"
+      ],
+      "count": 4,
+      "sentiment": "negative"
+    },
+    {
+      "theme": "Claims coverage / denials",
+      "one_line": "My dog's recent claim for acute bacterial diarrhea was denied as a \"pre-existing condition,\" even though her only prior history was anal sacculitis.",
+      "supporting_item_ids": [
+        "trustpilot:54062e58d07b",
+        "trustpilot:9b3882a6bc80"
+      ],
+      "count": 2,
+      "sentiment": "negative"
+    },
+    {
+      "theme": "Pet story / testimonial",
+      "one_line": "For Example, I got medications to take home for my dog after surgery and they denied my reimbursement request.",
+      "supporting_item_ids": [
+        "trustpilot:54062e58d07b",
+        "trustpilot:9b3882a6bc80"
+      ],
+      "count": 2,
+      "sentiment": "negative"
+    }
+  ],
+  "trending": [
+    {
+      "query": "nibbles pet insurance",
+      "wow_percent": 0.0,
+      "current_index": 0.0,
+      "as_of": "2026-04-27T03:16:07.864381Z"
+    },
+    {
+      "query": "nibbles card",
+      "wow_percent": -100.0,
+      "current_index": 0.0,
+      "as_of": "2026-04-27T03:16:07.864277Z"
+    },
+    {
+      "query": "nibbles.com",
+      "wow_percent": -100.0,
+      "current_index": 0.0,
+      "as_of": "2026-04-27T03:16:07.864449Z"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Easy to setup my account and great free benefits",
+      "source_label": "Trustpilot",
+      "item_id": "trustpilot:f4b58e6691f6",
+      "url": "https://www.trustpilot.com/review/nibbles.com",
+      "engagement_label": "★★★★★ · verified verbatim"
+    },
+    {
+      "text": "Easy to apply",
+      "source_label": "Trustpilot",
+      "item_id": "trustpilot:86c0fd942015",
+      "url": "https://www.trustpilot.com/review/nibbles.com",
+      "engagement_label": "★★★★★ · verified verbatim"
+    },
+    {
+      "text": "Very easy to figure out how to apply",
+      "source_label": "Trustpilot",
+      "item_id": "trustpilot:b7ada50100fd",
+      "url": "https://www.trustpilot.com/review/nibbles.com",
+      "engagement_label": "★★★★★ · verified verbatim"
+    }
+  ],
+  "alerts": [],
+  "leadership_mentions": [],
+  "methodology_sources": [
+    "Reddit (r/CreditCards, r/petinsurance, r/dogs, r/cats, r/personalfinance)",
+    "Google Trends (US)",
+    "Apple App Store (US)",
+    "Trustpilot (manual weekly)"
+  ],
+  "methodology_window": "Trailing 720h ending 2026-04-27 03:16 UTC"
+}

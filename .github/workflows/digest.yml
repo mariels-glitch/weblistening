@@ -1,0 +1,45 @@
+name: Nibbles Pulse Digest
+
+on:
+  schedule:
+    # 7:00 AM America/Los_Angeles = 14:00 UTC (adjust for DST twice/year)
+    - cron: "0 14 * * 1,3,5"   # Mon / Wed / Fri
+  workflow_dispatch:             # manual trigger from the Actions UI
+
+permissions:
+  contents: write                # needed for git push in the archive step
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run digest
+        run: python run_digest.py --out out/ --send
+        env:
+          ANTHROPIC_API_KEY:    ${{ secrets.ANTHROPIC_API_KEY }}
+          REDDIT_CLIENT_ID:     ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          REDDIT_USERNAME:      ${{ secrets.REDDIT_USERNAME }}
+          REDDIT_PASSWORD:      ${{ secrets.REDDIT_PASSWORD }}
+          REDDIT_USER_AGENT:    ${{ secrets.REDDIT_USER_AGENT }}
+          RESEND_API_KEY:       ${{ secrets.RESEND_API_KEY }}
+          DIGEST_FROM:          ${{ secrets.DIGEST_FROM }}
+          DIGEST_TO:            ${{ secrets.DIGEST_TO }}
+
+      - name: Commit digest archive
+        run: |
+          git config user.name  "nibbles-bot"
+          git config user.email "bot@nibbles.com"
+          git add out/ nibbles.duckdb 2>/dev/null || git add out/
+          git diff --staged --quiet || git commit -m "digest $(date -u +%Y-%m-%d)"
+          git push

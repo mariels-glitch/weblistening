@@ -1,0 +1,241 @@
+{
+  "_note": "Realistic seed data modeled on actual Nibbles review patterns from Trustpilot, NerdWallet, The Points Guy, and Bankrate coverage found in research on 2026-04-19. Not live scraped. Swap fixture for live fetch in production by dropping the --fixture flag.",
+  "items": [
+    {
+      "item_id": "appstore:r-001",
+      "source": "appstore",
+      "product_line": "card",
+      "author_hash": "aaaa000000000001",
+      "created_at": "2026-04-18T16:02:00+00:00",
+      "text": "Approved in under 2 minutes. The whole application was genuinely seamless — best onboarding experience I've had on any card.",
+      "url": "https://apps.apple.com/us/app/nibbles-card/id1588893484#review-001",
+      "engagement": {"stars": 5}
+    },
+    {
+      "item_id": "appstore:r-002",
+      "source": "appstore",
+      "product_line": "card",
+      "author_hash": "aaaa000000000002",
+      "created_at": "2026-04-18T18:11:00+00:00",
+      "text": "Reimbursed in three days. Honestly did not expect that. My vet bill was $840 and it just showed up in my account.",
+      "url": "https://apps.apple.com/us/app/nibbles-card/id1588893484#review-002",
+      "engagement": {"stars": 5}
+    },
+    {
+      "item_id": "appstore:r-003",
+      "source": "appstore",
+      "product_line": "card",
+      "author_hash": "aaaa000000000003",
+      "created_at": "2026-04-18T19:45:00+00:00",
+      "text": "App keeps crashing when I try to upload a vet bill photo. This started right after the 3.4.0 update. Please fix.",
+      "url": "https://apps.apple.com/us/app/nibbles-card/id1588893484#review-003",
+      "engagement": {"stars": 1}
+    },
+    {
+      "item_id": "appstore:r-004",
+      "source": "appstore",
+      "product_line": "card",
+      "author_hash": "aaaa000000000004",
+      "created_at": "2026-04-18T20:22:00+00:00",
+      "text": "3x rewards at my vet was a nice surprise. Didn't even know that was a thing when I applied.",
+      "url": "https://apps.apple.com/us/app/nibbles-card/id1588893484#review-004",
+      "engagement": {"stars": 5}
+    },
+    {
+      "item_id": "appstore:r-005",
+      "source": "appstore",
+      "product_line": "card",
+      "author_hash": "aaaa000000000005",
+      "created_at": "2026-04-18T21:00:00+00:00",
+      "text": "Crashes every time I open the claims tab. iOS 18. Worked fine two weeks ago.",
+      "url": "https://apps.apple.com/us/app/nibbles-card/id1588893484#review-005",
+      "engagement": {"stars": 1}
+    },
+    {
+      "item_id": "appstore:r-006",
+      "source": "appstore",
+      "product_line": "card",
+      "author_hash": "aaaa000000000006",
+      "created_at": "2026-04-18T22:30:00+00:00",
+      "text": "Best pet perk I have on any card. Worth it for the insurance alone.",
+      "url": "https://apps.apple.com/us/app/nibbles-card/id1588893484#review-006",
+      "engagement": {"stars": 5}
+    },
+    {
+      "item_id": "appstore:r-007",
+      "source": "appstore",
+      "product_line": "card",
+      "author_hash": "aaaa000000000007",
+      "created_at": "2026-04-19T01:05:00+00:00",
+      "text": "App crashed three times during checkout this morning. iOS 18.2, iPhone 15 Pro. Cleared cache, reinstalled, same result.",
+      "url": "https://apps.apple.com/us/app/nibbles-card/id1588893484#review-007",
+      "engagement": {"stars": 2}
+    },
+    {
+      "item_id": "appstore:r-008",
+      "source": "appstore",
+      "product_line": "card",
+      "author_hash": "aaaa000000000008",
+      "created_at": "2026-04-19T02:30:00+00:00",
+      "text": "Filed a claim in November and it is April now, still nothing paid. Have called four times.",
+      "url": "https://apps.apple.com/us/app/nibbles-card/id1588893484#review-008",
+      "engagement": {"stars": 1}
+    },
+    {
+      "item_id": "appstore:r-009",
+      "source": "appstore",
+      "product_line": "card",
+      "author_hash": "aaaa000000000009",
+      "created_at": "2026-04-19T03:15:00+00:00",
+      "text": "Approved in two minutes, card arrived in three days. Slick.",
+      "url": "https://apps.apple.com/us/app/nibbles-card/id1588893484#review-009",
+      "engagement": {"stars": 5}
+    },
+    {
+      "item_id": "appstore:r-010",
+      "source": "appstore",
+      "product_line": "card",
+      "author_hash": "aaaa000000000010",
+      "created_at": "2026-04-19T04:00:00+00:00",
+      "text": "App upload feature is broken. Cannot add a photo of my receipt without the whole thing freezing.",
+      "url": "https://apps.apple.com/us/app/nibbles-card/id1588893484#review-010",
+      "engagement": {"stars": 2}
+    },
+    {
+      "item_id": "appstore:r-011",
+      "source": "appstore",
+      "product_line": "card",
+      "author_hash": "aaaa000000000011",
+      "created_at": "2026-04-19T05:10:00+00:00",
+      "text": "Three of my last five uploads failed. Bug since the latest update.",
+      "url": "https://apps.apple.com/us/app/nibbles-card/id1588893484#review-011",
+      "engagement": {"stars": 2}
+    },
+    {
+      "item_id": "appstore:r-012",
+      "source": "appstore",
+      "product_line": "card",
+      "author_hash": "aaaa000000000012",
+      "created_at": "2026-04-19T06:00:00+00:00",
+      "text": "I love this card. My dog got sick last month and I was reimbursed in four days. Highly recommend.",
+      "url": "https://apps.apple.com/us/app/nibbles-card/id1588893484#review-012",
+      "engagement": {"stars": 5}
+    },
+    {
+      "item_id": "reddit:abc123",
+      "source": "reddit",
+      "product_line": "card",
+      "author_hash": "bbbb000000000001",
+      "created_at": "2026-04-18T14:10:00+00:00",
+      "text": "Anyone have the Nibbles card? Thinking about applying for my pit. Is the pet insurance actually legit or is this a gimmick?",
+      "url": "https://www.reddit.com/r/CreditCards/comments/abc123/",
+      "engagement": {"upvotes": 47, "num_comments": 12}
+    },
+    {
+      "item_id": "reddit:def456",
+      "source": "reddit",
+      "product_line": "card",
+      "author_hash": "bbbb000000000002",
+      "created_at": "2026-04-18T15:30:00+00:00",
+      "text": "I have the Nibbles card and my reimbursement took three weeks last time. Getting frustrated, considering switching to Lemonade Pet.",
+      "url": "https://www.reddit.com/r/petinsurance/comments/def456/",
+      "engagement": {"upvotes": 31, "num_comments": 8}
+    },
+    {
+      "item_id": "reddit:ghi789",
+      "source": "reddit",
+      "product_line": "insurance",
+      "author_hash": "bbbb000000000003",
+      "created_at": "2026-04-18T17:00:00+00:00",
+      "text": "Nibbles insurance denied my claim as pre-existing. My dog has never had this condition before. Anyone else dealing with this?",
+      "url": "https://www.reddit.com/r/petinsurance/comments/ghi789/",
+      "engagement": {"upvotes": 58, "num_comments": 22}
+    },
+    {
+      "item_id": "reddit:jkl012",
+      "source": "reddit",
+      "product_line": "card",
+      "author_hash": "bbbb000000000004",
+      "created_at": "2026-04-18T18:45:00+00:00",
+      "text": "Approved for Nibbles in literally two minutes. The application flow is smooth. If you have a pet and decent credit, no brainer.",
+      "url": "https://www.reddit.com/r/CreditCards/comments/jkl012/",
+      "engagement": {"upvotes": 124, "num_comments": 31}
+    },
+    {
+      "item_id": "reddit:mno345",
+      "source": "reddit",
+      "product_line": "card",
+      "author_hash": "bbbb000000000005",
+      "created_at": "2026-04-18T20:00:00+00:00",
+      "text": "Is Nibbles legit? Saw an ad for it on instagram and the 'free pet insurance' thing sounds too good to be true. Anyone have real experience?",
+      "url": "https://www.reddit.com/r/personalfinance/comments/mno345/",
+      "engagement": {"upvotes": 19, "num_comments": 7}
+    },
+    {
+      "item_id": "reddit:pqr678",
+      "source": "reddit",
+      "product_line": "card",
+      "author_hash": "bbbb000000000006",
+      "created_at": "2026-04-19T01:20:00+00:00",
+      "text": "Switched to Nibbles from Chase Freedom last month. The 3x pet rewards is way better than Chase's generic categories if you have a dog or cat.",
+      "url": "https://www.reddit.com/r/churning/comments/pqr678/",
+      "engagement": {"upvotes": 72, "num_comments": 14}
+    },
+    {
+      "item_id": "reddit:stu901",
+      "source": "reddit",
+      "product_line": "insurance",
+      "author_hash": "bbbb000000000007",
+      "created_at": "2026-04-19T03:00:00+00:00",
+      "text": "Nibbles app is crashing again after today's update. Tried to submit a claim, got a blank screen. iPhone 14 iOS 18.",
+      "url": "https://www.reddit.com/r/petinsurance/comments/stu901/",
+      "engagement": {"upvotes": 23, "num_comments": 5}
+    },
+    {
+      "item_id": "reddit:vwx234",
+      "source": "reddit",
+      "product_line": "competitor",
+      "author_hash": "bbbb000000000008",
+      "created_at": "2026-04-19T04:45:00+00:00",
+      "text": "Lemonade Pet vs Nibbles — I've had both. Lemonade is faster on claims but Nibbles has the credit card rewards. Depends what you value.",
+      "url": "https://www.reddit.com/r/petinsurance/comments/vwx234/",
+      "engagement": {"upvotes": 88, "num_comments": 24}
+    },
+    {
+      "item_id": "reddit:yz0567",
+      "source": "reddit",
+      "product_line": "card",
+      "author_hash": "bbbb000000000009",
+      "created_at": "2026-04-19T05:30:00+00:00",
+      "text": "My pup had an ACL tear and Nibbles covered it. Six weeks of physical therapy, all reimbursed. This card paid for itself three times over.",
+      "url": "https://www.reddit.com/r/dogs/comments/yz0567/",
+      "engagement": {"upvotes": 241, "num_comments": 47}
+    },
+    {
+      "item_id": "trustpilot_manual:tp-001",
+      "source": "trustpilot_manual",
+      "product_line": "insurance",
+      "author_hash": "cccc000000000001",
+      "created_at": "2026-04-17T00:00:00+00:00",
+      "text": "Zero communication from this company since I signed up. Filed a claim in November and still nothing paid. Called five times, no answers.",
+      "url": "https://www.trustpilot.com/review/nibbles.com#tp-001",
+      "engagement": {"stars": 1}
+    },
+    {
+      "item_id": "trustpilot_manual:tp-002",
+      "source": "trustpilot_manual",
+      "product_line": "insurance",
+      "author_hash": "cccc000000000002",
+      "created_at": "2026-04-17T00:00:00+00:00",
+      "text": "Easy to submit claims. Reimbursement came through in four business days. No complaints.",
+      "url": "https://www.trustpilot.com/review/nibbles.com#tp-002",
+      "engagement": {"stars": 5}
+    }
+  ],
+  "trends": [
+    {"query": "nibbles vs lemonade pet", "wow_percent": 220, "current_index": 68, "as_of": "2026-04-19T06:00:00+00:00"},
+    {"query": "nibbles app not working", "wow_percent": 140, "current_index": 52, "as_of": "2026-04-19T06:00:00+00:00"},
+    {"query": "is nibbles card legit", "wow_percent": 45, "current_index": 34, "as_of": "2026-04-19T06:00:00+00:00"},
+    {"query": "nibbles pet insurance", "wow_percent": 18, "current_index": 72, "as_of": "2026-04-19T06:00:00+00:00"}
+  ]
+}

@@ -1,0 +1,171 @@
+# Nibbles Listening Engine — config
+# Owned by PM. Revisit quarterly. Any change to this file should be reviewed
+# with marketing before merging (per Decision 7).
+
+brand:
+  name: Nibbles
+  home_url: https://nibbles.com
+  home_domain: nibbles.com
+  issuer: Lead Bank
+
+# --- SOURCES -----------------------------------------------------------------
+
+sources:
+  reddit:
+    enabled: true
+    subreddits:
+      - CreditCards
+      - Nibbles
+      - petinsurancereviews
+      - personalfinance
+      - churning
+      - insurance
+      - dogs
+      - cats
+      - Pets
+      - povertyfinance
+      - AskVet
+    max_posts_per_sub: 100      # per fetch
+    window_hours: 720           # 30-day window — Nibbles mention volume is low enough to warrant this
+    owned_subreddits:           # pull ALL posts from these, no keyword filter
+      - Nibbles
+    user_agent: "nibbles-listening/0.1 (by /u/nibbles-pm)"
+
+  appstore:
+    enabled: true
+    app_id: "1588893484"        # Nibbles Card iOS (Decision 8)
+    country: us
+    max_pages: 5                # RSS gives 50 per page
+
+  google_trends:
+    enabled: true
+    geo: US
+    timeframe: "now 7-d"
+    rising_count: 10
+
+  trustpilot:
+    enabled: false              # Manual copy-paste only (Decision 4)
+    note: "Manual reviews land via intake form, source=trustpilot_manual"
+
+# --- KEYWORDS ----------------------------------------------------------------
+
+streams:
+  card:
+    label: "Nibbles Card"
+    must_match_any:
+      - "nibbles card"
+      - "nibbles credit"
+      - "nibbles mastercard"
+      - "nibbles rewards"
+      - "nibbles pet rewards"
+      - "nibbles pet credit"
+    disambiguate_away_from:
+      - "nibbles cereal"
+      - "nibbles food"
+      - "nibbles treats"
+      - "nibbles the cat"
+      - "nibbles the dog"
+
+  insurance:
+    label: "Nibbles Pet Insurance"
+    must_match_any:
+      - "nibbles pet insurance"
+      - "nibbles insurance"
+      - "nibbles claim"
+      - "nibbles reimbursement"
+      - "nibbles vet"
+      - "nibbles coverage"
+      - "odie"                   # Odie is Nibbles' underwriter — requires nibbles co-occurrence below
+    require_co_occurrence_of_any:
+      - nibbles                  # odie alone is NOT enough — must appear alongside nibbles
+    disambiguate_away_from:
+      - "nibbles cereal"
+      - "nibbles food"
+      - "nibbles treats"
+
+  brand_umbrella:
+    label: "Nibbles (brand)"
+    must_match_any:
+      - "nibbles.com"
+      - "try nibbles"
+      - "nibbles app"
+      - "nibbles pet"            # catches "nibbles pet credit", "nibbles pet card" etc.
+      - "ad for nibbles"
+      - "about nibbles"
+    disambiguate_away_from:
+      - "nibbles cereal"
+      - "nibbles food"
+      - "nibbles treats"
+      - "nibbles the cat"
+      - "nibbles the dog"
+      - "nibbles and bits"
+
+competitors:
+  - name: "Lemonade Pet"
+    keywords: ["lemonade pet", "lemonade pet insurance"]
+  - name: "Trupanion"
+    keywords: ["trupanion"]
+  - name: "Healthy Paws"
+    keywords: ["healthy paws", "healthypaws"]
+  - name: "Pets Best"
+    keywords: ["pets best"]
+  - name: "Embrace"
+    keywords: ["embrace pet"]
+  - name: "Chase Freedom (pet context)"
+    keywords: ["chase freedom pet", "chase pet rewards"]
+  - name: "Capital One Savor"
+    keywords: ["capital one savor pet"]
+
+trends_keywords:
+  - "nibbles card"
+  - "nibbles pet insurance"
+  - "nibbles.com"
+
+# --- BRAND SAFETY ROSTER (Decision 10) ---------------------------------------
+# First-party posts authored by anyone on this roster are EXCLUDED.
+# Third-party posts that MENTION anyone on this roster are routed to the
+# "Leadership mentions" callout, not the main sentiment sections.
+
+roster:
+  first_party_usernames:        # social handles; keep short
+    - nibbles_official
+    - nibbles_support
+  leadership_names:             # names referenced BY third parties
+    - "Sarah Thompson"          # example; replace with actual
+    - "Nibbles CEO"
+    - "Nibbles founder"
+  partner_names:
+    - "Lead Bank"
+
+# --- DIGEST ------------------------------------------------------------------
+
+digest:
+  cadence: "M/W/F"              # Decision 9
+  send_time_local: "07:00"
+  recipient:                    # Decision 6 — solo dogfood for 14 days
+    v1_dogfood:
+      - {name: "Mariel", email: "mariels@gmail.com", tz: "America/Los_Angeles"}
+    v1_expanded:                # Activates on day 15
+      - {name: "Mariel (PM)",      email: "mariels@gmail.com",    tz: "America/Los_Angeles"}
+      - {name: "Founder / CEO",    email: "founder@nibbles.com",  tz: "America/Los_Angeles"}
+      - {name: "Head of Marketing",email: "marketing@nibbles.com",tz: "America/Los_Angeles"}
+      - {name: "CX Lead",          email: "cx@nibbles.com",       tz: "America/Los_Angeles"}
+      - {name: "Eng Lead",         email: "eng@nibbles.com",      tz: "America/Los_Angeles"}
+
+  sentiment_weights:
+    positive: 1.0
+    neutral: 0.5
+    negative: 0.0
+    mixed: 0.5
+  anomaly_sigma: 2.0
+  min_items_for_theme: 2
+  top_quotes: 3
+
+# --- LLM ---------------------------------------------------------------------
+
+llm:
+  provider: claude              # "claude" or "lexicon" (fallback)
+  classifier_model: "claude-haiku-4-5-20251001"
+  summarizer_model: "claude-sonnet-4-6"
+  max_items_to_summarize: 400
+  daily_budget_usd: 5.0
