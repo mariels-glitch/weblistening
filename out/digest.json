@@ -1,10 +1,10 @@
 {
-  "digest_id": "digest-20260520",
-  "date": "2026-05-20T16:50:36.874114Z",
+  "digest_id": "digest-20260522",
+  "date": "2026-05-22T16:22:29.122278Z",
   "window_hours": 720,
-  "items_analyzed": 23,
-  "sentiment_score": 57,
-  "sentiment_delta_vs_7d": -17,
+  "items_analyzed": 22,
+  "sentiment_score": 59,
+  "sentiment_delta_vs_7d": -15,
   "headline": "Today: customers praised app ux / bugs; complaints rising on claims speed.",
   "loved": [
     {
@@ -64,7 +64,26 @@
       "sentiment": "negative"
     }
   ],
-  "trending": [],
+  "trending": [
+    {
+      "query": "nibbles pet insurance",
+      "wow_percent": 0.0,
+      "current_index": 0.0,
+      "as_of": "2026-05-22T16:22:08.671407Z"
+    },
+    {
+      "query": "nibbles.com",
+      "wow_percent": 0.0,
+      "current_index": 0.0,
+      "as_of": "2026-05-22T16:22:08.671555Z"
+    },
+    {
+      "query": "nibbles card",
+      "wow_percent": -100.0,
+      "current_index": 0.0,
+      "as_of": "2026-05-22T16:22:08.671233Z"
+    }
+  ],
   "quotes": [
     {
       "text": "Easy to setup my account and great free benefits",
@@ -96,5 +115,5 @@
     "Apple App Store (US)",
     "Trustpilot (manual weekly)"
   ],
-  "methodology_window": "Trailing 720h ending 2026-05-20 16:50 UTC"
+  "methodology_window": "Trailing 720h ending 2026-05-22 16:22 UTC"
 }
