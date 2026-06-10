@@ -1,6 +1,6 @@
 {
-  "digest_id": "digest-20260608",
-  "date": "2026-06-08T17:20:48.398631Z",
+  "digest_id": "digest-20260610",
+  "date": "2026-06-10T16:56:30.489880Z",
   "window_hours": 720,
   "items_analyzed": 22,
   "sentiment_score": 59,
@@ -96,5 +96,5 @@
     "Apple App Store (US)",
     "Trustpilot (manual weekly)"
   ],
-  "methodology_window": "Trailing 720h ending 2026-06-08 17:20 UTC"
+  "methodology_window": "Trailing 720h ending 2026-06-10 16:56 UTC"
 }
