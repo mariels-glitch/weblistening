@@ -1,6 +1,6 @@
 {
-  "digest_id": "digest-20260810",
-  "date": "2026-08-10T14:54:01.635984Z",
+  "digest_id": "digest-20260812",
+  "date": "2026-08-12T14:53:23.453339Z",
   "window_hours": 720,
   "items_analyzed": 24,
   "sentiment_score": 58,
@@ -64,7 +64,26 @@
       "sentiment": "negative"
     }
   ],
-  "trending": [],
+  "trending": [
+    {
+      "query": "nibbles card",
+      "wow_percent": 0.0,
+      "current_index": 0.0,
+      "as_of": "2026-08-12T14:53:03.828343Z"
+    },
+    {
+      "query": "nibbles.com",
+      "wow_percent": 0.0,
+      "current_index": 0.0,
+      "as_of": "2026-08-12T14:53:03.828618Z"
+    },
+    {
+      "query": "nibbles pet insurance",
+      "wow_percent": -100.0,
+      "current_index": 0.0,
+      "as_of": "2026-08-12T14:53:03.828497Z"
+    }
+  ],
   "quotes": [
     {
       "text": "Easy to setup my account and great free benefits",
@@ -96,5 +115,5 @@
     "Apple App Store (US)",
     "Trustpilot (manual weekly)"
   ],
-  "methodology_window": "Trailing 720h ending 2026-08-10 14:54 UTC"
+  "methodology_window": "Trailing 720h ending 2026-08-12 14:53 UTC"
 }
