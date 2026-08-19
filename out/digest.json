@@ -1,23 +1,12 @@
 {
-  "digest_id": "digest-20260817",
-  "date": "2026-08-17T14:22:43.825949Z",
+  "digest_id": "digest-20260819",
+  "date": "2026-08-19T14:28:24.765709Z",
   "window_hours": 720,
-  "items_analyzed": 24,
-  "sentiment_score": 58,
-  "sentiment_delta_vs_7d": -16,
-  "headline": "Today: customers praised app ux / bugs; complaints rising on claims speed.",
+  "items_analyzed": 20,
+  "sentiment_score": 55,
+  "sentiment_delta_vs_7d": -19,
+  "headline": "Today: customers praised onboarding / application; complaints rising on claims speed.",
   "loved": [
-    {
-      "theme": "App UX / bugs",
-      "one_line": "App was easy to navigate App was easy to navigate.",
-      "supporting_item_ids": [
-        "appstore:13646127643",
-        "appstore:13633391549",
-        "trustpilot:c8e145f60e65"
-      ],
-      "count": 3,
-      "sentiment": "positive"
-    },
     {
       "theme": "Onboarding / Application",
       "one_line": "Easy to apply Easy to apply.",
@@ -64,7 +53,26 @@
       "sentiment": "negative"
     }
   ],
-  "trending": [],
+  "trending": [
+    {
+      "query": "nibbles card",
+      "wow_percent": 0.0,
+      "current_index": 0.0,
+      "as_of": "2026-08-19T14:28:06.840777Z"
+    },
+    {
+      "query": "nibbles.com",
+      "wow_percent": 0.0,
+      "current_index": 0.0,
+      "as_of": "2026-08-19T14:28:06.841034Z"
+    },
+    {
+      "query": "nibbles pet insurance",
+      "wow_percent": -100.0,
+      "current_index": 0.0,
+      "as_of": "2026-08-19T14:28:06.840903Z"
+    }
+  ],
   "quotes": [
     {
       "text": "Easy to setup my account and great free benefits",
@@ -96,5 +104,5 @@
     "Apple App Store (US)",
     "Trustpilot (manual weekly)"
   ],
-  "methodology_window": "Trailing 720h ending 2026-08-17 14:22 UTC"
+  "methodology_window": "Trailing 720h ending 2026-08-19 14:28 UTC"
 }
